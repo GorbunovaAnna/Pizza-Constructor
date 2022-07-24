@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Constructor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Marck+Script&family=Merriweather:wght@400;700&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Vollkorn+SC:wght@400;700&family=Yuji+Boku&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="order">
+        <div class="order__information-area">
+          <div class="order__title">
+            <img src="/img/pizzamaker.png" alt="" />
+            <h1>Конструктор пиццы</h1>
+          </div>
+          <div class="order__text">
+            <h2>Вы выбрали:</h2>
+            <p>1) основа - <span class="choice-value base"></span></p>
+            <p>2) соус - <span class="choice-value sauce"></span></p>
+            <p>3) мясо - <span class="choice-value meat"></span></p>
+            <p>4) сыр - <span class="choice-value cheese"></span></p>
+          </div>
+          <div class="order__btn">
+            <h2 >Цена: <span class="order__price"></span></h2>
+            <button class="btn" disabled>ЗАКАЗАТЬ</button>
+          </div>
+        </div>
+        <div class="order__visualization-area">
+          <div class="top-left hider"></div>
+          <div class="top-right hider"></div>
+          <div class="bottom-left hider"></div>
+          <div class="bottom-right hider"></div>
+        </div>
+      </div>
+      <div class="ingredients">
+        <h2 class="ingredients__title">Ингридиенты:</h2>
+        <form id="orderForm" class="ingredients__columns" value="value">
+          <div class="ingredients__column">
+            <h3>Основа</h3>
+            <input type="radio" id="base1" name="base" value="classical" />
+            <label for="base1">классика</label>
+
+            <input type="radio" id="base2" name="base" value="thin" />
+            <label for="base2">тонкая</label>
+
+            <input type="radio" id="base3" name="base" value="cheeseBoard" />
+            <label for="base3">сырный борт</label>
+
+            <input type="radio" id="base4" name="base" value="hotDogBoard" />
+            <label for="base4">хот-дог борт</label>
+          </div>
+
+          <div class="ingredients__column">
+            <h3>Соус</h3>
+            <input type="radio" id="sauce1" name="sauce" value="cheesy" />
+            <label for="sauce1">сырный</label>
+
+            <input type="radio" id="sauce2" name="sauce" value="mustard" />
+            <label for="sauce2">горчичный</label>
+
+            <input type="radio" id="sauce3" name="sauce" value="barbecue" />
+            <label for="sauce3">барбекю</label>
+
+            <input type="radio" id="sauce4" name="sauce" value="sweetAndSour" />
+            <label for="sauce4">кисло-сладкий</label>
+          </div>
+          <div class="ingredients__column">
+            <h3>Мясо</h3>
+            <input type="checkbox" id="meat1" name="meat" value="ham" />
+            <label for="meat1">ветчина</label>
+            <input type="checkbox" id="meat2" name="meat" value="pepperoni" />
+            <label for="meat2">пепперони</label>
+            <input
+              type="checkbox"
+              id="meat3"
+              name="meat"
+              value="bavarianSausages"
+            />
+            <label for="meat3">баварские колбаски</label>
+            <input type="checkbox" id="meat4" name="meat" value="bacon" />
+            <label for="meat4">бекон</label>
+          </div>
+          <div class="ingredients__column">
+            <h3>Сыр</h3>
+            <input
+              type="checkbox"
+              id="cheese1"
+              name="cheese"
+              value="mozzarella"
+            />
+            <label for="cheese1">моцарелла</label>
+            <input
+              type="checkbox"
+              id="cheese2"
+              name="cheese"
+              value="parmesan"
+            />
+            <label for="cheese2">пармезан</label>
+            <input
+              type="checkbox"
+              id="cheese3"
+              name="cheese"
+              value="blueCheese"
+            />
+            <label for="cheese3">голубой сыр</label>
+            <input type="checkbox" id="cheese4" name="cheese" value="cheddar" />
+            <label for="cheese4">чеддер</label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="./dist/src/index.js"></script>
+  </body>
+</html>
